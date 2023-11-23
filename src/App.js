@@ -49,24 +49,17 @@ function App() {
     <div className="App">
       <h1>Todo List</h1>
       <div>
-        <div>
-          <input
-            id="add-task"
-            ref={inputTask}
-            type="text"
-            pattern=".{0,19}"
-            maxLength="20"
-            placeholder="Task..."
-            onKeyDown={(event) => {if (event.key === "Enter") addTask()}}
-            onChange={(event) => {
-              setCurrentTask(event.target.value);
-            }}
-          />
-          <div className="errorMsg">Max 20 Characters</div>
-        </div>
-        <div>
-          <button onClick={addTask} id="add-task-button"> Add Task </button>
-        </div>
+        <input
+          id="add-task"
+          ref={inputTask}
+          type="text"
+          placeholder="Task..."
+          onKeyDown={(event) => {if (event.key === "Enter") addTask()}}
+          onChange={(event) => {
+            setCurrentTask(event.target.value);
+          }}
+        />
+        <button onClick={addTask} id="add-task-button"> Add Task </button>
       </div>
       <hr />
       <ul>
