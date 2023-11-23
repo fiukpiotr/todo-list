@@ -73,7 +73,7 @@ function App() {
               <button id="delete-button" onClick={() => deleteTask(val.task)}>
                 remove
               </button>
-              {val.completed ? <h2>✅</h2> : ""}
+              {val.completed ? <h2><span role="img" aria-label="Checked">✅</span></h2> : ""}
             </div>
           );
         })}
